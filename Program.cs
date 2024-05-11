@@ -10,7 +10,12 @@ class Program
         // Console.WriteLine('This will throw an error.');
         // Console.WriteLine(123); // For numbers
         // Console.WriteLine(0.25F); // For floats
-        Console.WriteLine(true);
-        Console.WriteLine(false);
+        // Console.WriteLine(true);
+        // Console.WriteLine(false);
+        string firstName;
+        char userOption;
+        int gameScore;
+        decimal particlesPerMillion;
+        bool processedCustomer;
     }
 }
