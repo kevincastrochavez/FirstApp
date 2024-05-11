@@ -23,9 +23,14 @@ class Program
 
         // string firstName;
         // firstName = "Bob";
-        string firstName = "Bob";
-        Console.WriteLine(firstName);
+        // string firstName = "Bob";
+        // Console.WriteLine(firstName);
 
-        var message = "Hello world!"; // var is used for dynamic typing
+        // var message = "Hello world!"; // var is used for dynamic typing
+
+        string firstName = "Bob";
+        int messages = 3;
+        double temperature = 34.4; // or decimal temperature = 34.4m;
+        Console.WriteLine($"Hello, {firstName}! You have {messages} messages in your inbox. The temperature is {temperature} celsius.");
     }
 }
