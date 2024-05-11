@@ -12,10 +12,13 @@ class Program
         // Console.WriteLine(0.25F); // For floats
         // Console.WriteLine(true);
         // Console.WriteLine(false);
+        // string firstName;
+        // char userOption;
+        // int gameScore;
+        // decimal particlesPerMillion;
+        // bool processedCustomer;
         string firstName;
-        char userOption;
-        int gameScore;
-        decimal particlesPerMillion;
-        bool processedCustomer;
+        firstName = "Bob";
+        Console.WriteLine(firstName);
     }
 }
