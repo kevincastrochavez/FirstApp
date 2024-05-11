@@ -33,24 +33,48 @@ class Program
         // double temperature = 34.4; // or decimal temperature = 34.4m;
         // Console.WriteLine($"Hello, {firstName}! You have {messages} messages in your inbox. The temperature is {temperature} celsius.");
 
-        Console.WriteLine("Hello\nWorld!"); // \n for new line
-        Console.WriteLine("Hello\tWorld!"); // \t for tab
-        Console.WriteLine("Hello \"World\"!"); // \ for escape
-        Console.WriteLine("c:\\source\\repos"); // \\ since one is for escape
-        Console.WriteLine(@"    c:\source\repos    
-        (this is where your code goes)");
+        // Console.WriteLine("Hello\nWorld!"); // \n for new line
+        // Console.WriteLine("Hello\tWorld!"); // \t for tab
+        // Console.WriteLine("Hello \"World\"!"); // \ for escape
+        // Console.WriteLine("c:\\source\\repos"); // \\ since one is for escape
+        // Console.WriteLine(@"    c:\source\repos    
+        // (this is where your code goes)");
 
-        string firstName = "Bob";
-        string message = "Hello " + firstName;
-        Console.WriteLine(message);
+        // string firstName = "Bob";
+        // string message = "Hello " + firstName;
+        // Console.WriteLine(message);
 
-        string projectName = "ACME";
-        string russianMessage = "\u041f\u043e\u0441\u043c\u043e\u0442\u0440\u0435\u0442\u044c \u0440\u0443\u0441\u0441\u043a\u0438\u0439 \u0432\u044b\u0432\u043e\u0434";
+        // string projectName = "ACME";
+        // string russianMessage = "\u041f\u043e\u0441\u043c\u043e\u0442\u0440\u0435\u0442\u044c \u0440\u0443\u0441\u0441\u043a\u0438\u0439 \u0432\u044b\u0432\u043e\u0434";
 
-        Console.WriteLine($@"View English output:    
-        c:\Exercise\{projectName}\data.txt");
+        // Console.WriteLine($@"View English output:    
+        // c:\Exercise\{projectName}\data.txt");
 
-        Console.WriteLine($@"View English output:    
-        c:\Exercise\{russianMessage}\data.txt");
+        // Console.WriteLine($@"View English output:    
+        // c:\Exercise\{russianMessage}\data.txt");
+
+        // int firstNumber = 12;
+        // int secondNumber = 7;
+        // Console.WriteLine(firstNumber + secondNumber);
+
+        int sum = 7 + 5;
+        int difference = 7 - 5;
+        int product = 7 * 5;
+        int quotient = 7 / 5;
+
+        Console.WriteLine("Sum: " + sum);
+        Console.WriteLine("Difference: " + difference);
+        Console.WriteLine("Product: " + product);
+        Console.WriteLine("Quotient: " + quotient);
+
+        int first = 7;
+        int second = 5;
+        decimal quotient = (decimal)first / (decimal)second; // Explicit casting
+        Console.WriteLine(quotient);
+
+        int fahrenheit = 94;
+        decimal celsius = ((decimal)fahrenheit - 32) * 5 / 9;
+        // or decimal celsius = (fahrenheit - 32m) * (5m / 9m);
+        Console.WriteLine(celsius);
     }
 }
