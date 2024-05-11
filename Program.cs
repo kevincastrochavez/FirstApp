@@ -4,7 +4,9 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("This is the first line.");
-        Console.WriteLine("This is the second line.");
+        // Console.WriteLine("This is the first line.");
+        // Console.WriteLine("This is the second line.");
+        // Console.WriteLine('a');
+        Console.WriteLine('This will throw an error.');
     }
 }
