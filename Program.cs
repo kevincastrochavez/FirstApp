@@ -237,40 +237,47 @@ class Program
 
 
         //////////// ARRAYS ////////////
-        string[] fraudulentOrderIDs = new string[3];
-        fraudulentOrderIDs[0] = "A123";
-        fraudulentOrderIDs[1] = "B456";
-        fraudulentOrderIDs[2] = "C789";
+        // string[] fraudulentOrderIDs = new string[3];
+        // fraudulentOrderIDs[0] = "A123";
+        // fraudulentOrderIDs[1] = "B456";
+        // fraudulentOrderIDs[2] = "C789";
 
-        // OR initialize the array
-        string[] fraudulentOrderIDs = { "A123", "B456", "C789" };
+        // // OR initialize the array
+        // string[] fraudulentOrderIDs = { "A123", "B456", "C789" };
 
-        Console.WriteLine($"First: {fraudulentOrderIDs[0]}");
-        Console.WriteLine($"Second: {fraudulentOrderIDs[1]}");
-        Console.WriteLine($"Third: {fraudulentOrderIDs[2]}");
+        // Console.WriteLine($"First: {fraudulentOrderIDs[0]}");
+        // Console.WriteLine($"Second: {fraudulentOrderIDs[1]}");
+        // Console.WriteLine($"Third: {fraudulentOrderIDs[2]}");
 
-        // Print the length of the array
-        Console.WriteLine($"There are {fraudulentOrderIDs.Length} fraudulent orders to process.");
+        // // Print the length of the array
+        // Console.WriteLine($"There are {fraudulentOrderIDs.Length} fraudulent orders to process.");
 
-        string[] names = { "Rowena", "Robin", "Bao" };
-        foreach (string name in names)
-        {
-            Console.WriteLine(name);
-        }
+        // string[] names = { "Rowena", "Robin", "Bao" };
+        // foreach (string name in names)
+        // {
+        //     Console.WriteLine(name);
+        // }
 
-        int[] inventory = { 200, 450, 700, 175, 250 };
-        int sum = 0;
-        foreach (int items in inventory)
-        {
-            sum += items;
-        }
-        Console.WriteLine($"We have {sum} items in inventory.");
+        // int[] inventory = { 200, 450, 700, 175, 250 };
+        // int sum = 0;
+        // foreach (int items in inventory)
+        // {
+        //     sum += items;
+        // }
+        // Console.WriteLine($"We have {sum} items in inventory.");
 
-        // Challenge
-        string[] orderIds = { "B123", "C234", "A345", "C15", "B177", "G3003", "C235", "B179" };
-        foreach (var order in orderIds)
-        {
-            if (order.StartsWith("B")) Console.WriteLine(order);
-        }
+        // // Challenge
+        // string[] orderIds = { "B123", "C234", "A345", "C15", "B177", "G3003", "C235", "B179" };
+        // foreach (var order in orderIds)
+        // {
+        //     if (order.StartsWith("B")) Console.WriteLine(order);
+        // }
+
+        //////////// CODE CONVENTIONS, NAMING ////////////
+        // camelCase
+        char userOption;
+        int gameScore;
+        float particlesPerMillion;
+        bool processedCustomer;
     }
 }
