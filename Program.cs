@@ -409,48 +409,163 @@ class Program
         // Console.WriteLine($"{employeeName}, {title}");
 
         //////////// FOR LOOPS ////////////
-        for (int i = 0; i < 10; i++)
-        {
-            Console.WriteLine(i);
-            if (i == 7) break;
-        }
+        // for (int i = 0; i < 10; i++)
+        // {
+        //     Console.WriteLine(i);
+        //     if (i == 7) break;
+        // }
 
-        string[] names = { "Alex", "Eddie", "David", "Michael" };
-        for (int i = names.Length - 1; i >= 0; i--)
-        {
-            Console.WriteLine(names[i]);
-            if (names[i] == "David") names[i] = "Sammy"; // Arrays can be edited.
-        }
+        // string[] names = { "Alex", "Eddie", "David", "Michael" };
+        // for (int i = names.Length - 1; i >= 0; i--)
+        // {
+        //     Console.WriteLine(names[i]);
+        //     if (names[i] == "David") names[i] = "Sammy"; // Arrays can be edited.
+        // }
 
-        // FizzBuzz
-        for (int i = 1; i < 101; i++)
-        {
-            if ((i % 3 == 0) && (i % 5 == 0))
-                Console.WriteLine($"{i} - FizzBuzz");
-            else if (i % 3 == 0)
-                Console.WriteLine($"{i} - Fizz");
-            else if (i % 5 == 0)
-                Console.WriteLine($"{i} - Buzz");
-            else
-                Console.WriteLine($"{i}");
-        }
+        // // FizzBuzz
+        // for (int i = 1; i < 101; i++)
+        // {
+        //     if ((i % 3 == 0) && (i % 5 == 0))
+        //         Console.WriteLine($"{i} - FizzBuzz");
+        //     else if (i % 3 == 0)
+        //         Console.WriteLine($"{i} - Fizz");
+        //     else if (i % 5 == 0)
+        //         Console.WriteLine($"{i} - Buzz");
+        //     else
+        //         Console.WriteLine($"{i}");
+        // }
 
         //////////// LOOPING ////////////
 
-        // the ourAnimals array will store the following: 
-        string animalSpecies = "";
-        string animalID = "";
-        string animalAge = "";
-        string animalPhysicalDescription = "";
-        string animalPersonalityDescription = "";
-        string animalNickname = "";
+        // // the ourAnimals array will store the following: 
+        // string animalSpecies = "";
+        // string animalID = "";
+        // string animalAge = "";
+        // string animalPhysicalDescription = "";
+        // string animalPersonalityDescription = "";
+        // string animalNickname = "";
 
-        // variables that support data entry
-        int maxPets = 8;
-        string? readResult;
-        string menuSelection = "";
+        // // variables that support data entry
+        // int maxPets = 8;
+        // string? readResult;
+        // string menuSelection = "";
 
-        // array used to store runtime data, there is no persisted data
-        string[,] ourAnimals = new string[maxPets, 6];
+        // // array used to store runtime data, there is no persisted data
+        // string[,] ourAnimals = new string[maxPets, 6];
+
+        ////////// DATA TYPES ////////////
+        // Console.WriteLine("Signed integral types:");
+
+        // Console.WriteLine($"sbyte  : {sbyte.MinValue} to {sbyte.MaxValue}");
+        // Console.WriteLine($"short  : {short.MinValue} to {short.MaxValue}");
+        // Console.WriteLine($"int    : {int.MinValue} to {int.MaxValue}");
+        // Console.WriteLine($"long   : {long.MinValue} to {long.MaxValue}");
+
+        // Console.WriteLine("");
+        // Console.WriteLine("Unsigned integral types:");
+
+        // Console.WriteLine($"byte   : {byte.MinValue} to {byte.MaxValue}");
+        // Console.WriteLine($"ushort : {ushort.MinValue} to {ushort.MaxValue}");
+        // Console.WriteLine($"uint   : {uint.MinValue} to {uint.MaxValue}");
+        // Console.WriteLine($"ulong  : {ulong.MinValue} to {ulong.MaxValue}");
+
+        // // Casting
+        // decimal myDecimal = 3.14m;
+        // Console.WriteLine($"decimal: {myDecimal}");
+
+        // int myInt = (int)myDecimal;
+        // Console.WriteLine($"int: {myInt}");
+
+        // // Use ToString() to convert a number to a string
+        // int first = 5;
+        // int second = 7;
+        // string message = first.ToString() + second.ToString();
+        // Console.WriteLine(message);
+
+        // // Convert a string to an int using the Parse() helper method
+        // string first = "5";
+        // string second = "7";
+        // int sum = int.Parse(first) + int.Parse(second);
+        // Console.WriteLine(sum);
+
+        // // Convert a string to a int using the Convert class
+        // string value1 = "5";
+        // string value2 = "7";
+        // int result = Convert.ToInt32(value1) * Convert.ToInt32(value2);
+        // Console.WriteLine(result);
+
+        ////////// SORT, REVERSE, CLEAR, RESIZE ////////////
+        string[] pallets = { "B14", "A11", "B12", "A13" };
+
+        Console.WriteLine("Sorted...");
+        Array.Sort(pallets);
+        foreach (var pallet in pallets)
+        {
+            Console.WriteLine($"-- {pallet}");
+        }
+
+        Console.WriteLine("");
+        Console.WriteLine("Reversed...");
+        Array.Reverse(pallets);
+        foreach (var pallet in pallets)
+        {
+            Console.WriteLine($"-- {pallet}");
+        }
+
+        string[] pallets = { "B14", "A11", "B12", "A13" };
+        Console.WriteLine("");
+
+        Array.Clear(pallets, 0, 2);
+        Console.WriteLine($"Clearing 2 ... count: {pallets.Length}");
+        foreach (var pallet in pallets)
+        {
+            Console.WriteLine($"-- {pallet}");
+        }
+
+        Console.WriteLine("");
+        Array.Resize(ref pallets, 6);
+        Console.WriteLine($"Resizing 6 ... count: {pallets.Length}");
+
+        pallets[4] = "C01";
+        pallets[5] = "C02";
+
+        foreach (var pallet in pallets)
+        {
+            Console.WriteLine($"-- {pallet}");
+        }
+
+        string value = "abc123";
+        char[] valueArray = value.ToCharArray();
+        Array.Reverse(valueArray);
+        string result = new string(valueArray);
+        Console.WriteLine(result);
+
+        string value = "abc123";
+        char[] valueArray = value.ToCharArray();
+        Array.Reverse(valueArray);
+        // string result = new string(valueArray);
+        string result = String.Join(",", valueArray);
+        Console.WriteLine(result);
+
+        // Challenge: Reverse the order of the words in a sentence
+        string pangram = "The quick brown fox jumps over the lazy dog";
+
+        // Step 1
+        string[] message = pangram.Split(' ');
+
+        //Step 2
+        string[] newMessage = new string[message.Length];
+
+        // Step 3
+        for (int i = 0; i < message.Length; i++)
+        {
+            char[] letters = message[i].ToCharArray();
+            Array.Reverse(letters);
+            newMessage[i] = new string(letters);
+        }
+
+        //Step 4
+        string result = String.Join(" ", newMessage);
+        Console.WriteLine(result);
     }
 }
