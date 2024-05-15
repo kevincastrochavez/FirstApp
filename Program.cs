@@ -371,13 +371,41 @@ class Program
         // Console.WriteLine($"Discount: {discount}");
 
         //////////// LOGIC AND SCOPE IN C# ////////////
-        bool flag = true;
-        if (flag)
-        {
-            int value = 10;
-            Console.WriteLine($"Inside the code block: {value}");
-        }
-        Console.WriteLine($"Outside the code block: {value}"); // This will not work.
+        // bool flag = true;
+        // if (flag)
+        // {
+        //     int value = 10;
+        //     Console.WriteLine($"Inside the code block: {value}");
+        // }
+        // Console.WriteLine($"Outside the code block: {value}"); // This will not work.
 
+
+        //////////// SWITCH STATEMENTS ////////////
+
+        int employeeLevel = 200;
+        string employeeName = "John Smith";
+
+        string title = "";
+
+        switch (employeeLevel)
+        {
+            case 100:
+                title = "Junior Associate";
+                break;
+            case 200:
+                title = "Senior Associate";
+                break;
+            case 300:
+                title = "Manager";
+                break;
+            case 400:
+                title = "Senior Manager";
+                break;
+            default:
+                title = "Associate";
+                break;
+        }
+
+        Console.WriteLine($"{employeeName}, {title}");
     }
 }
