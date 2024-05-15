@@ -382,30 +382,57 @@ class Program
 
         //////////// SWITCH STATEMENTS ////////////
 
-        int employeeLevel = 200;
-        string employeeName = "John Smith";
+        // int employeeLevel = 200;
+        // string employeeName = "John Smith";
 
-        string title = "";
+        // string title = "";
 
-        switch (employeeLevel)
+        // switch (employeeLevel)
+        // {
+        //     case 100:
+        //         title = "Junior Associate";
+        //         break;
+        //     case 200:
+        //         title = "Senior Associate";
+        //         break;
+        //     case 300:
+        //         title = "Manager";
+        //         break;
+        //     case 400:
+        //         title = "Senior Manager";
+        //         break;
+        //     default:
+        //         title = "Associate";
+        //         break;
+        // }
+
+        // Console.WriteLine($"{employeeName}, {title}");
+
+        //////////// FOR LOOPS ////////////
+        for (int i = 0; i < 10; i++)
         {
-            case 100:
-                title = "Junior Associate";
-                break;
-            case 200:
-                title = "Senior Associate";
-                break;
-            case 300:
-                title = "Manager";
-                break;
-            case 400:
-                title = "Senior Manager";
-                break;
-            default:
-                title = "Associate";
-                break;
+            Console.WriteLine(i);
+            if (i == 7) break;
         }
 
-        Console.WriteLine($"{employeeName}, {title}");
+        string[] names = { "Alex", "Eddie", "David", "Michael" };
+        for (int i = names.Length - 1; i >= 0; i--)
+        {
+            Console.WriteLine(names[i]);
+            if (names[i] == "David") names[i] = "Sammy"; // Arrays can be edited.
+        }
+
+        // FizzBuzz
+        for (int i = 1; i < 101; i++)
+        {
+            if ((i % 3 == 0) && (i % 5 == 0))
+                Console.WriteLine($"{i} - FizzBuzz");
+            else if (i % 3 == 0)
+                Console.WriteLine($"{i} - Fizz");
+            else if (i % 5 == 0)
+                Console.WriteLine($"{i} - Buzz");
+            else
+                Console.WriteLine($"{i}");
+        }
     }
 }
