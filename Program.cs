@@ -495,77 +495,115 @@ class Program
         // Console.WriteLine(result);
 
         ////////// SORT, REVERSE, CLEAR, RESIZE ////////////
-        string[] pallets = { "B14", "A11", "B12", "A13" };
+        // string[] pallets = { "B14", "A11", "B12", "A13" };
 
-        Console.WriteLine("Sorted...");
-        Array.Sort(pallets);
-        foreach (var pallet in pallets)
-        {
-            Console.WriteLine($"-- {pallet}");
-        }
+        // Console.WriteLine("Sorted...");
+        // Array.Sort(pallets);
+        // foreach (var pallet in pallets)
+        // {
+        //     Console.WriteLine($"-- {pallet}");
+        // }
 
-        Console.WriteLine("");
-        Console.WriteLine("Reversed...");
-        Array.Reverse(pallets);
-        foreach (var pallet in pallets)
-        {
-            Console.WriteLine($"-- {pallet}");
-        }
+        // Console.WriteLine("");
+        // Console.WriteLine("Reversed...");
+        // Array.Reverse(pallets);
+        // foreach (var pallet in pallets)
+        // {
+        //     Console.WriteLine($"-- {pallet}");
+        // }
 
-        string[] pallets = { "B14", "A11", "B12", "A13" };
-        Console.WriteLine("");
+        // string[] pallets = { "B14", "A11", "B12", "A13" };
+        // Console.WriteLine("");
 
-        Array.Clear(pallets, 0, 2);
-        Console.WriteLine($"Clearing 2 ... count: {pallets.Length}");
-        foreach (var pallet in pallets)
-        {
-            Console.WriteLine($"-- {pallet}");
-        }
+        // Array.Clear(pallets, 0, 2);
+        // Console.WriteLine($"Clearing 2 ... count: {pallets.Length}");
+        // foreach (var pallet in pallets)
+        // {
+        //     Console.WriteLine($"-- {pallet}");
+        // }
 
-        Console.WriteLine("");
-        Array.Resize(ref pallets, 6);
-        Console.WriteLine($"Resizing 6 ... count: {pallets.Length}");
+        // Console.WriteLine("");
+        // Array.Resize(ref pallets, 6);
+        // Console.WriteLine($"Resizing 6 ... count: {pallets.Length}");
 
-        pallets[4] = "C01";
-        pallets[5] = "C02";
+        // pallets[4] = "C01";
+        // pallets[5] = "C02";
 
-        foreach (var pallet in pallets)
-        {
-            Console.WriteLine($"-- {pallet}");
-        }
+        // foreach (var pallet in pallets)
+        // {
+        //     Console.WriteLine($"-- {pallet}");
+        // }
 
-        string value = "abc123";
-        char[] valueArray = value.ToCharArray();
-        Array.Reverse(valueArray);
-        string result = new string(valueArray);
-        Console.WriteLine(result);
-
-        string value = "abc123";
-        char[] valueArray = value.ToCharArray();
-        Array.Reverse(valueArray);
+        // string value = "abc123";
+        // char[] valueArray = value.ToCharArray();
+        // Array.Reverse(valueArray);
         // string result = new string(valueArray);
-        string result = String.Join(",", valueArray);
-        Console.WriteLine(result);
+        // Console.WriteLine(result);
 
-        // Challenge: Reverse the order of the words in a sentence
-        string pangram = "The quick brown fox jumps over the lazy dog";
+        // string value = "abc123";
+        // char[] valueArray = value.ToCharArray();
+        // Array.Reverse(valueArray);
+        // // string result = new string(valueArray);
+        // string result = String.Join(",", valueArray);
+        // Console.WriteLine(result);
 
-        // Step 1
-        string[] message = pangram.Split(' ');
+        // // Challenge: Reverse the order of the words in a sentence
+        // string pangram = "The quick brown fox jumps over the lazy dog";
 
-        //Step 2
-        string[] newMessage = new string[message.Length];
+        // // Step 1
+        // string[] message = pangram.Split(' ');
 
-        // Step 3
-        for (int i = 0; i < message.Length; i++)
-        {
-            char[] letters = message[i].ToCharArray();
-            Array.Reverse(letters);
-            newMessage[i] = new string(letters);
-        }
+        // //Step 2
+        // string[] newMessage = new string[message.Length];
 
-        //Step 4
-        string result = String.Join(" ", newMessage);
-        Console.WriteLine(result);
+        // // Step 3
+        // for (int i = 0; i < message.Length; i++)
+        // {
+        //     char[] letters = message[i].ToCharArray();
+        //     Array.Reverse(letters);
+        //     newMessage[i] = new string(letters);
+        // }
+
+        // //Step 4
+        // string result = String.Join(" ", newMessage);
+        // Console.WriteLine(result);
+
+        ////////////// ALPHANUMERIC DATA FOR PRESENTATION ////////////
+        string first = "Hello";
+        string second = "World";
+        Console.WriteLine($"{first} {second}!");
+        Console.WriteLine($"{second} {first}!");
+        Console.WriteLine($"{first} {first} {first}!");
+
+        decimal price = 123.45m;
+        int discount = 50;
+        Console.WriteLine($"Price: {price:C} (Save {discount:C})");
+
+        decimal measurement = 123456.78912m;
+        Console.WriteLine($"Measurement: {measurement:N} units");
+        decimal measurement = 123456.78912m;
+        Console.WriteLine($"Measurement: {measurement:N4} units");
+
+        // Percentages
+        decimal tax = .36785m;
+        Console.WriteLine($"Tax rate: {tax:P2}");
+
+        int invoiceNumber = 1201;
+        decimal productShares = 25.4568m;
+        decimal subtotal = 2750.00m;
+        decimal taxPercentage = .15825m;
+        decimal total = 3185.19m;
+
+        Console.WriteLine($"Invoice Number: {invoiceNumber}");
+        Console.WriteLine($"   Shares: {productShares:N3} Product");
+        Console.WriteLine($"     Sub Total: {subtotal:C}");
+        Console.WriteLine($"           Tax: {taxPercentage:P2}");
+        Console.WriteLine($"     Total Billed: {total:C}");
+
+        // PadRight
+        string input = "Hello, World!";
+        Console.WriteLine(input.PadRight(12)); // 12 spaces including characters
+        Console.WriteLine(input.PadLeft(12, '-'));
+        Console.WriteLine(input.PadRight(12, '-'));
     }
 }
