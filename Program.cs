@@ -569,41 +569,65 @@ class Program
         // Console.WriteLine(result);
 
         ////////////// ALPHANUMERIC DATA FOR PRESENTATION ////////////
-        string first = "Hello";
-        string second = "World";
-        Console.WriteLine($"{first} {second}!");
-        Console.WriteLine($"{second} {first}!");
-        Console.WriteLine($"{first} {first} {first}!");
+        // string first = "Hello";
+        // string second = "World";
+        // Console.WriteLine($"{first} {second}!");
+        // Console.WriteLine($"{second} {first}!");
+        // Console.WriteLine($"{first} {first} {first}!");
 
-        decimal price = 123.45m;
-        int discount = 50;
-        Console.WriteLine($"Price: {price:C} (Save {discount:C})");
+        // decimal price = 123.45m;
+        // int discount = 50;
+        // Console.WriteLine($"Price: {price:C} (Save {discount:C})");
 
-        decimal measurement = 123456.78912m;
-        Console.WriteLine($"Measurement: {measurement:N} units");
-        decimal measurement = 123456.78912m;
-        Console.WriteLine($"Measurement: {measurement:N4} units");
+        // decimal measurement = 123456.78912m;
+        // Console.WriteLine($"Measurement: {measurement:N} units");
+        // decimal measurement = 123456.78912m;
+        // Console.WriteLine($"Measurement: {measurement:N4} units");
 
-        // Percentages
-        decimal tax = .36785m;
-        Console.WriteLine($"Tax rate: {tax:P2}");
+        // // Percentages
+        // decimal tax = .36785m;
+        // Console.WriteLine($"Tax rate: {tax:P2}");
 
-        int invoiceNumber = 1201;
-        decimal productShares = 25.4568m;
-        decimal subtotal = 2750.00m;
-        decimal taxPercentage = .15825m;
-        decimal total = 3185.19m;
+        // int invoiceNumber = 1201;
+        // decimal productShares = 25.4568m;
+        // decimal subtotal = 2750.00m;
+        // decimal taxPercentage = .15825m;
+        // decimal total = 3185.19m;
 
-        Console.WriteLine($"Invoice Number: {invoiceNumber}");
-        Console.WriteLine($"   Shares: {productShares:N3} Product");
-        Console.WriteLine($"     Sub Total: {subtotal:C}");
-        Console.WriteLine($"           Tax: {taxPercentage:P2}");
-        Console.WriteLine($"     Total Billed: {total:C}");
+        // Console.WriteLine($"Invoice Number: {invoiceNumber}");
+        // Console.WriteLine($"   Shares: {productShares:N3} Product");
+        // Console.WriteLine($"     Sub Total: {subtotal:C}");
+        // Console.WriteLine($"           Tax: {taxPercentage:P2}");
+        // Console.WriteLine($"     Total Billed: {total:C}");
 
-        // PadRight
-        string input = "Hello, World!";
-        Console.WriteLine(input.PadRight(12)); // 12 spaces including characters
-        Console.WriteLine(input.PadLeft(12, '-'));
-        Console.WriteLine(input.PadRight(12, '-'));
+        // // PadRight
+        // string input = "Hello, World!";
+        // Console.WriteLine(input.PadRight(12)); // 12 spaces including characters
+        // Console.WriteLine(input.PadLeft(12, '-'));
+        // Console.WriteLine(input.PadRight(12, '-'));
+
+        //////////////// STRING METHODS /////////////
+        string message = "What is the value <span>between the tags</span>?";
+
+        const string openSpan = "<span>";
+        const string closeSpan = "</span>";
+
+        int openingPosition = message.IndexOf(openSpan);
+        int closingPosition = message.IndexOf(closeSpan);
+
+        openingPosition += openSpan.Length;
+        int length = closingPosition - openingPosition;
+        Console.WriteLine(message.Substring(openingPosition, length));
+
+        // Remove
+        string data = "12345John Smith          5000  3  ";
+        string updatedData = data.Remove(5, 20);
+        Console.WriteLine(updatedData);
+
+        // Replace
+        string message = "This--is--ex-amp-le--da-ta";
+        message = message.Replace("--", " ");
+        message = message.Replace("-", "");
+        Console.WriteLine(message);
     }
 }
