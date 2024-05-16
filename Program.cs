@@ -740,37 +740,69 @@ class Program
         // } while (menuSelection != "exit");
 
         //////////////////// METHODS //////////////////////////
-        int[] a = { 1, 2, 3, 4, 5 };
+        // int[] a = { 1, 2, 3, 4, 5 };
 
-        Console.WriteLine("Contents of Array:");
-        PrintArray(); // It can be called before have it declared.
+        // Console.WriteLine("Contents of Array:");
+        // PrintArray(); // It can be called before have it declared.
 
-        void PrintArray()
+        // void PrintArray()
+        // {
+        //     foreach (int x in a)
+        //     {
+        //         Console.Write($"{x} ");
+        //     }
+        //     Console.WriteLine();
+        // }
+
+        // Best practices
+        // void ShowData(string a, int b, int c);
+        // void DisplayDate(string month, int day, int year);
+
+        // void DisplayRandomNumbers()
+        // {
+        //     Random random = new Random();
+
+        //     for (int i = 0; i < 5; i++)
+        //     {
+        //         Console.Write($"{random.Next(1, 100)} ");
+        //     }
+
+        //     Console.WriteLine();
+        // }
+
+        // Console.WriteLine("Generating random numbers:");
+        // DisplayRandomNumbers();
+
+        //////////////////// METHODS WITH PARAMETERS //////////////////////////
+        CountTo(5);
+
+        void CountTo(int max)
         {
-            foreach (int x in a)
+            for (int i = 0; i < max; i++)
             {
-                Console.Write($"{x} ");
+                Console.Write($"${i}, ");
             }
-            Console.WriteLine();
         }
 
-        Best practices
-        void ShowData(string a, int b, int c);
-        void DisplayDate(string month, int day, int year);
+        PrintCircleArea(12);
 
-        void DisplayRandomNumbers()
+        void PrintCircleArea(int radius)
         {
-            Random random = new Random();
-
-            for (int i = 0; i < 5; i++)
-            {
-                Console.Write($"{random.Next(1, 100)} ");
-            }
-
-            Console.WriteLine();
+            double pi = 3.14159;
+            double area = pi * (radius * radius);
+            Console.WriteLine($"Area = {area}");
         }
 
-        Console.WriteLine("Generating random numbers:");
-        DisplayRandomNumbers();
+        string status = "Healthy";
+
+        Console.WriteLine($"Start: {status}");
+        SetHealth(status, false);
+        Console.WriteLine($"End: {status}");
+
+        void SetHealth(string status, bool isHealthy)
+        {
+            status = (isHealthy ? "Healthy" : "Unhealthy");
+            Console.WriteLine($"Middle: {status}");
+        }
     }
 }
